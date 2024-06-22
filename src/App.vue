@@ -3,47 +3,23 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <div class="bg-light text-center border-radius-lg py-4 mb-4">
-  <h1 class="fw-bold">My First Bootstrap Page</h1>
-  <p class="text-center">Resize this responsive page to see the effect!</p>
-</div>
+  <div>
+    <base-button type="primary" @click="modals.modal0 = true">
+      Launch demo modal
+    </base-button>
+   <modal :show.sync="modals.modal0">
+     <template slot="header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+     </template>
+     <div>
+      ...
+     </div>
+     <template slot="footer">
+         <base-button type="secondary" @click="modals.modal0 = false">Close</base-button>
+         <base-button type="primary">Save changes</base-button>
+     </template>
+   </modal>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3 class="fw-bold">Column 1</h3>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-    <div class="col-sm-4">
-      <h3 class="fw-bold">Column 2</h3>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-    <div class="col-sm-4">
-      <h3 class="fw-bold">Column 3</h3>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
-</div>
-<div class="bg-light text-center border-radius-lg py-4 mb-4">
-  <h1 class="fw-bold">My First Bootstrap Page</h1>
-  <p class="text-center">Resize this responsive page to see the effect!</p>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3 class="fw-bold">Column 1</h3>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-    <div class="col-sm-4">
-      <h3 class="fw-bold">Column 2</h3>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-    <div class="col-sm-4">
-      <h3 class="fw-bold">Column 3</h3>
-      <p>Lorem ipsum dolor..</p>
-    </div>
-  </div>
 </div>
 
   <div>
