@@ -12,7 +12,7 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
   </div>
   <HelloWorld msg="Укладка керамогранита в СПб." />
-  Укладка широкоформатнного керамогранита в Санкт-Петербурге.
+  Укладка широкоформаного керамогранита в Санкт-Петербурге.
 </template>
 
 <style scoped>
