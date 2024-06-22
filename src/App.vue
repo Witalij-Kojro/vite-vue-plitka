@@ -3,25 +3,56 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <div>
-    <base-button type="primary" @click="modals.modal0 = true">
-      Launch demo modal
-    </base-button>
-   <modal :show.sync="modals.modal0">
-     <template slot="header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-     </template>
-     <div>
-      ...
-     </div>
-     <template slot="footer">
-         <base-button type="secondary" @click="modals.modal0 = false">Close</base-button>
-         <base-button type="primary">Save changes</base-button>
-     </template>
-   </modal>
-
-</div>
-
+  <MDBNavbar expand="lg" light bg="light" container>
+    <MDBNavbarBrand href="#">Brand</MDBNavbarBrand>
+    <MDBNavbarToggler
+      @click="collapse1 = !collapse1"
+      target="#navbarSupportedContent"
+    ></MDBNavbarToggler>
+    <MDBCollapse v-model="collapse1" id="navbarSupportedContent">
+      <MDBNavbarNav class="mb-2 mb-lg-0">
+        <MDBNavbarItem to="#" active>
+          Home
+        </MDBNavbarItem>
+        <MDBNavbarItem href="#">
+          Link
+        </MDBNavbarItem>
+        <MDBNavbarItem>
+          <!-- Navbar dropdown -->
+          <MDBDropdown class="nav-item" v-model="dropdown1">
+            <MDBDropdownToggle
+              tag="a"
+              class="nav-link"
+              @click="dropdown1 = !dropdown1"
+              >Dropdown</MDBDropdownToggle
+            >
+            <MDBDropdownMenu aria-labelledby="dropdownMenuButton">
+              <MDBDropdownItem href="#">Action</MDBDropdownItem>
+              <MDBDropdownItem href="#">Another Action</MDBDropdownItem>
+              <MDBDropdownItem href="#"
+                >Something else here</MDBDropdownItem
+              >
+            </MDBDropdownMenu>
+          </MDBDropdown>
+        </MDBNavbarItem>
+        <MDBNavbarItem to="#" disabled>
+          Disabled
+        </MDBNavbarItem>
+      </MDBNavbarNav>
+      <!-- Search form -->
+      <form class="d-flex input-group w-auto">
+        <input
+          type="search"
+          class="form-control"
+          placeholder="Type query"
+          aria-label="Search"
+        />
+        <MDBBtn outline="primary">
+          Search
+        </MDBBtn>
+      </form>
+    </MDBCollapse>
+  </MDBNavbar>
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
