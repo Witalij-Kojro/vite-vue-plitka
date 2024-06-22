@@ -3,41 +3,26 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <div style="position: relative">
-<base-nav type="default" effect="dark" expand>
-    <a class="navbar-brand" href="#">Default Color</a>
+<div class="bg-light text-center border-radius-lg py-4 mb-4">
+  <h1 class="fw-bold">My First Bootstrap Page</h1>
+  <p class="text-center">Resize this responsive page to see the effect!</p>
+</div>
 
-    <div class="row" slot="content-header" slot-scope="{closeMenu}">
-        <div class="col-6 collapse-brand">
-            <a href="https://demos.creative-tim.com/vue-argon-design-system/documentation/">
-                <img src="https://demos.creative-tim.com/vue-argon-design-system/img/brand/blue.png">
-            </a>
-        </div>
-        <div class="col-6 collapse-close">
-            <close-button @click="closeMenu"></close-button>
-        </div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3 class="fw-bold">Column 1</h3>
+      <p>Lorem ipsum dolor..</p>
     </div>
-
-    <ul class="navbar-nav ml-lg-auto">
-        <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="#">
-                Discover
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="#">
-                Profile
-            </a>
-        </li>
-        <base-dropdown tag="li" title="Settings">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Separated link</a>
-        </base-dropdown>
-    </ul>
- </base-nav>
+    <div class="col-sm-4">
+      <h3 class="fw-bold">Column 2</h3>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+    <div class="col-sm-4">
+      <h3 class="fw-bold">Column 3</h3>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
 </div>
 
   <div>
